@@ -10,20 +10,62 @@
 
 
   <style>
+    main {
+      width: 100%;
+    }
+
+    #content {
+      padding: 25px 20px 20px 20px;
+    }
+
+    .main-section header {
+      font-size: 28px;
+      padding-bottom: 12px;
+    }
+
+    .navbar-wrapper {
+      padding: 0;
+      border-right: 2px solid gray;
+    }
+
+    #navbar > header {
+      font-size: 32px;
+      padding: 8px;
+      overflow: hidden;
+    }
+
+    .nav-link {
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    p {
+      padding-left: 8px;
+    }
+
+    code {
+      background-color: #f7f7f7;
+      color: #4d4e53;
+      padding: 12px 8px;
+      display: block;
+      border-radius: 4px;
+    }
+
     @media only screen and (min-width: 1024px) {
       #navbar {
-          width: 30%;
+          width: 25%;
           position: fixed;
           float: left;
       }
     }
 
-
-
-    main {
-      width: 100%;
+    @media only screen and (max-width: 960px) {
+      #navbar > header {
+        font-size: 24px;
+        text-align: center;
+      }
     }
-
+  
   </style>
 
 
@@ -36,7 +78,7 @@
   <main id="main-doc">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 navbar-wrapper">
           <nav id="navbar">
             <header>JS Documentation</header>
             <a href="#introduction" class="nav-link">Introduction</a>
@@ -49,7 +91,7 @@
             <a href="#data_types" class="nav-link">Data types</a>
           </nav>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9" id="content">
             <section class="main-section" id="introduction">
               <header>Introduction</header>
               <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside
